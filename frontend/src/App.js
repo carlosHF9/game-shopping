@@ -11,18 +11,24 @@ const theme = {
   textColor: 'black',
   textWithPrimary: 'white',
   overallBackgroundColor: 'white',
+  animationInsidePrimary: 'white',
   font: "'Josefin Sans', sans-serif",
   defaultBorderRadius: '3px'
 }
 
 function App() {
+
+  function Print() {
+    console.log('worked')
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
         <h1>Nice button</h1>
-        <Button size="large">Comprar</Button>
-
-        <LoadingAnimation />
+        <Button size="large" onClick={Print}>
+          Login
+        </Button>
       </div>
     </ThemeProvider>
   );

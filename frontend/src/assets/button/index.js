@@ -1,6 +1,7 @@
 import './style.css'
 import styled from "styled-components";
-
+import LoadingAnimation from '../loading-animation/index';
+import { useState } from 'react'
 
 const ButtonSize = {
     SMALL: 'small',
@@ -19,18 +20,27 @@ const ButtonClasses = {
 const ThemedButton = ({
     children,
     className,
-    size
+    size,
+    isSubmitting,
+    onClick
 }) => {
+
 
     return (
         <button className={`
             ${className}
+            ${`button`}
             ${ButtonClasses.ACTIVE}
             ${size === 'small' && ButtonClasses.SMALL}
             ${size === 'medium' && ButtonClasses.MEDIUM}
             ${size === 'large' && ButtonClasses.LARGE}
-        `}>
-            {children}
+        `}
+
+        onClick={onClick}
+        
+        >
+            {isSubmitting ? <LoadingAnimation /> : children}
+            
         </button>
     )
     

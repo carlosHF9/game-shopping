@@ -2,20 +2,25 @@ import './style.css'
 import styled from "styled-components"
 
 
-const Dot = styled.div`
-    height: 30px;
-    width: 30px;
+const DotComponent = ({className, animatedClassName}) => {
+
+    return <div className={`${className} ${animatedClassName}`}></div>
+}
+
+const Dot = styled(DotComponent)`
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
-    background-color: ${(props) => props.theme.primaryColor};
+    background-color: ${(props) => props.theme.animationInsidePrimary};
 `
 
 export default function LoadingAnimation() {
 
     return (
         <div className="loading-animation">
-            <Dot />
-            <Dot />
-            <Dot />
+            <Dot animatedClassName="dot--animated-1" />
+            <Dot animatedClassName="dot--animated-2"/>
+            <Dot animatedClassName="dot--animated-3"/>
             
         </div>
     )

@@ -1,6 +1,14 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .button--active-state {
 
 }
+
+
 
 .button--active-state:active {
     background-color: #6d0388;
