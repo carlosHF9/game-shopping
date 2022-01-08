@@ -1,0 +1,28 @@
+.button--active-state {
+
+}
+
+.button--active-state:active {
+    background-color: #6d0388;
+}
+
+.button--size-small {
+    width: 80px;
+    height: 35px;
+
+    
+}
+
+
+
+.button--size-medium {
+    width: 100px;
+    height: 45px;
+}
+
+.button--size-large {
+    width: 125px;
+    height: 56px;
+    
+}
+
